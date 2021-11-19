@@ -3,6 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <title>No new messages</title>
+    <script src="https://rawgit.com/browserstate/history.js/master/scripts/bundled-uncompressed/html4%2Bhtml5/native.history.js"></script>
+    </head>
+    <body>
+        <script>
+            window.setTimeout(function(){
+                document.title = "One new message";
+                History.replaceState({}, "One new message", window.location.href);
+            }, 3000);
+        </script>
     <meta
       name="description"
       content="Used as a boilerplate for tasks in the 'HTML, CSS and SASS' course in boom.dev"
